@@ -1,0 +1,12 @@
+.Contact {
+  width: 20%;
+  background-color: #d7d6fb;
+  margin: 15px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 20px;
+  box-shadow: 4px 6px 16px 0px rgba(22, 22, 22, 0.704);
+}
+.number {
+  color: grey;
+}

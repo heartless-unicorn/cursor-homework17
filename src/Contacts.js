@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Contacts.css";
 import { contacts } from "./ContactsList";
 import Contact from "./Contact";
 
@@ -35,7 +36,7 @@ function Contacts() {
   return (
     <div className="Contacts">
       <form>
-        <input onChange={handleSearchChange} />
+        <input onChange={handleSearchChange} className="searchfield" />
         <label for="femaleCheckBox">F</label>
         <input
           type="checkbox"
@@ -51,9 +52,11 @@ function Contacts() {
           onChange={() => setCheckedMale(!checkedMale)}
         />
       </form>
-      {contactList.map((element, i) => {
-        return <Contact data={element} key={i} />;
-      })}
+      <div className="phonelist">
+        {contactList.map((element, i) => {
+          return <Contact data={element} key={i} />;
+        })}
+      </div>
     </div>
   );
 }
